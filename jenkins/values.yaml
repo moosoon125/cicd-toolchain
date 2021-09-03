@@ -1,14 +1,14 @@
 controller:
   image: "harbor.clouddari.com/cicd/jenkins/jenkins"
-  tag: "2.289.3-jdk11"
+  tag: "2.60.3"
   imagePullSecretName: harbor-cred
   
   # List of plugins to be install during Jenkins controller start
   installPlugins: []
-    # - kubernetes:1.29.4
-    # - workflow-aggregator:2.6
-    # - git:4.7.1
-    # - configuration-as-code:1.51
+    - kubernetes:1.29.4
+    - workflow-aggregator:2.6
+    - git:4.7.1
+    - configuration-as-code:1.51
 
   sidecars:
     configAutoReload:
